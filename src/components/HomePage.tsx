@@ -49,27 +49,27 @@ export const HomePage = () => {
   console.log(data);
   return (
     <div className=" mx-auto max-w-md flex justify-center flex-col">
-      <div className="flex w-full justify-start mx-auto flex-col">
+      <div className="flex w-full justify-start mx-auto flex-col mt-4">
         <div className="w-full flex-col flex">
-          <p className="flex justify-center">Add title</p>
+          <p className="flex justify-center w-auto">Title</p>
           <input
             onChange={(e) => setTitle(e.target.value)}
             className="border rounded-lg p-3 m-3 outline-none "
           />
         </div>
-        <div className="w-full flex-col flex">
-          <p className="flex justify-center">Add description</p>
+        <div className="w-full flex-col flex ">
+          <p className="flex justify-center w-auto">Description</p>
           <input
             onChange={(e) => setDesc(e.target.value)}
             className="border rounded-lg p-3 m-3 outline-none "
           />
         </div>
         <div className="w-full flex-col flex">
-          <p className="flex justify-center">Add due date</p>
+          <p className="flex justify-center w-auto">Due date</p>
           <input
             type="date"
             onChange={(e) => setDate(e.target.value)}
-            className="border cursor-pointer rounded-lg p-3 m-3 outline-none "
+            className="border cursor-pointer rounded-lg p-3 m-3 outline-none w-auto"
           />
         </div>
 

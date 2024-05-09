@@ -7,7 +7,7 @@ import Edit from "./components/Edit";
 
 function App() {
   return (
-    <div className="bg-[#BF40BF]   h-screen">
+    <div className="bg-[#BF40BF]   min-h-screen">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>

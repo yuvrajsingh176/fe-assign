@@ -19,9 +19,12 @@ export const Edit = () => {
 
   const handleClick = async () => {
     const task = { title, description: desc, dueDate: date };
-    await axios.patch("https://be-assign-hknc.onrender.com/api/update-task/" + id, {
-      task,
-    });
+    await axios.patch(
+      "https://be-assign-hknc.onrender.com/api/update-task/" + id,
+      {
+        task,
+      }
+    );
     navigate("/");
   };
   const getAlldata = async () => {
@@ -41,9 +44,11 @@ export const Edit = () => {
   console.log(data);
   return (
     <div className=" mx-auto max-w-md flex justify-center flex-col">
-      <div className="flex w-full justify-start mx-auto flex-col">
+      <div className="flex w-full justify-start mx-auto flex-col mt-4">
         <div className="w-full flex-col flex">
-          <p className="flex justify-center">Add title</p>
+          <div className="w-full">
+            <p className="flex justify-center ">Title</p>
+          </div>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -51,7 +56,9 @@ export const Edit = () => {
           />
         </div>
         <div className="w-full flex-col flex">
-          <p className="flex justify-center">Add description</p>
+          <div className="w-full">
+            <p className="flex justify-center ">Description</p>
+          </div>
           <input
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
@@ -59,12 +66,15 @@ export const Edit = () => {
           />
         </div>
         <div className="w-full flex-col flex">
-          <p className="flex justify-center">Add due date</p>
+          <div className="w-full">
+            <p className="flex justify-center ">Due date</p>
+          </div>
+
           <input
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="border cursor-pointer rounded-lg p-3 m-3 outline-none "
+            className="border cursor-pointer rounded-lg p-3 m-3 outline-none w-auto"
           />
         </div>
 
